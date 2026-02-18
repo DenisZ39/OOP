@@ -7,7 +7,7 @@ int Div(int a, int b) { return a / b; }
 
 int main(int argc, char* argv[])
 {
-    char input[101] = "---***++++++///---+++/+-**---";
+    char input[101] = "---H***E+++L+++L///O---P+++O/+-**O---";
     func Operatori[4] = { Sum, Dif,Mul,Div };
     int S=0, V;
     Content x;
@@ -17,6 +17,8 @@ int main(int argc, char* argv[])
     {
         switch (input[i] - 42)
         {
+        default: 
+            break;
         case INMULTIRE:
             idx = 2;
             x.p1 = 3;
@@ -42,7 +44,7 @@ int main(int argc, char* argv[])
         S = S + Operatori[(int)idx](x.p1, x.p2);
     }
 
-    //S=263
+    //S=337
     printf("S = %d\n", S);
 
     return 0;
