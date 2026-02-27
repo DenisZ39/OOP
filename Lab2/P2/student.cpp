@@ -28,5 +28,19 @@ float student::GetHisGrade() {
 	return HisGrade;
 }
 float student::GetAverageGrade() {
-	return (MathGrade + EngGrade + HisGrade) / 3;
+	float media = 0;
+	int cnt = 0;
+	if (MathGrade != 0) {
+		media += MathGrade;
+		cnt++;
+	}
+	if (EngGrade != 0) {
+		media += EngGrade;
+		cnt++;
+	}
+	if (HisGrade != 0) {
+		media += HisGrade;
+		cnt++;
+	}
+	return media / cnt;
 }
